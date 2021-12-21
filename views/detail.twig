@@ -1,0 +1,19 @@
+{% extends 'layout.twig' %}
+{% block body %}
+    <div>
+      <h1>Label</h1>
+      <h2>{{ productDetail.label }}</h2>
+    </div>
+    <div>
+      <h1>Price</h1>
+      <h2>$ {{ productDetail.price }}</h2>
+    </div>
+    <div>
+      <h1>Quantity</h1>
+      <h2>{{ productDetail.quantity }} Item(s)</h2>
+    </div>
+    <div>
+      <img src="/{{ productDetail.image }}" alt="" />
+    </div>
+
+{% endblock %}

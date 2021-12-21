@@ -1,0 +1,41 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+  <fieldset style="width: 33%; display: block; margin: auto">
+    <legend>Create Product</legend>
+    <form action="/products" method="post" enctype="multipart/form-data">
+      <div style="margin-bottom: 15px">
+        Label
+        <label for="label_id" style="width: 100%; margin-bottom: 15px">
+          <input type="text" placeholder="Label" name="label" id="label_id"/>
+        </label>
+      </div>
+      <div style="margin-bottom: 15px">
+        <label for="price_id" style="width: 100%; margin-bottom: 15px">
+          Price
+          <input type="number" placeholder="Price" name="price" id="price_id"/>
+        </label>
+      </div>
+      <div style="margin-bottom: 15px">
+        <label for="quantity_id" style="width: 100%; margin-bottom: 15px">
+          Quantity
+          <input type="number" placeholder="Quantity" name="quantity" id="quantity_id"/>
+        </label>
+      </div>
+      <div style="margin-bottom: 15px">
+        <label for="desc_id" style="width: 100%; margin-bottom: 15px">
+          description
+          <textarea style="width: 100%" placeholder="Label" name="description" id="desc_id"></textarea>
+        </label>
+      </div>
+      <div style="margin-bottom: 15px">
+        <label for="image_id" style="width: 100%; margin-bottom: 15px">
+          Image
+          <input type="file" name="image" id="image_id"/>
+        </label>
+      </div>
+      <input type="submit" value="Create" style="float: right"/>
+    </form>
+  </fieldset>
+{% endblock %}
