@@ -13,12 +13,18 @@ var productRoute = require("./routes/product");
 var app = express();
 
 
+mongoose.connect("mongodb://localhost:27017/esprit")
+    .then(() => { console.log("databse connected"); })
+    .catch((exc) => { console.log(exc); })
+
+/*
 mongoose.connect("mongodb://mongo:27017/esprit")
     .then(() => {
         console.log("Database connected");
     }).catch((reason) => {
         console.log("not connected");
     })
+    */
 
 
 
